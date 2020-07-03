@@ -1,0 +1,31 @@
+<section>
+    <div class="container-fluid">
+        <div class="row margin">
+          <div class="col-md-8">
+              <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Author</th>
+                      <th>Keyword</th>
+                      <th>Date</th>
+                      <th>Delete</th>
+                      <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let list of data;let i = index">
+                      <td>{{list.author}}</td>
+                      <td>{{list.keyword}}</td>
+                      <td>{{list.date}}</td>
+                      <td (click)="delete(i)"><i class="glyphicon glyphicon-trash
+                        glyphicon" style="font-size:30px;color:red"></i></td>
+                      <td (click)="edit(list,i)"><i class="glyphicon glyphicon-pencil" style="font-size:30px"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+    
+        <div style="color:red;padding: 35px;">{{message}}</div>
+    </div>
+</section>

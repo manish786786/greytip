@@ -1,0 +1,38 @@
+
+
+section {
+    padding: 0px 60px;
+  }
+
+.card{
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 90%;
+    box-shadow: 2px 2px 20px #e67e22;
+}
+
+
+
+.card textarea{
+   width: 80%;
+   margin: 30px;
+}
+
+.row ul {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.row ul li {
+    display: inline-block;   
+    margin-right: 20px; 
+}
+
+.btn-info{
+    margin-left: 10px;
+}
+
+.button-btn{
+    padding: 20px;
+}

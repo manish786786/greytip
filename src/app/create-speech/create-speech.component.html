@@ -1,0 +1,31 @@
+<section>
+    <form [formGroup]="form">
+        <div class="row outer-card">
+            <div class="card">
+                <div class="row">
+                    <textarea name="message" id="message" cols="170" rows="20" class="form-control" formControlName="speech"></textarea>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><input type="text" placeholder="Author" class="form-control" formControlName="author"></li>
+                        <li><input type="text" placeholder="Subject keyword" class="form-control" formControlName="keyword"></li>
+                        <li><input type="date" placeholder="Data" class="form-control" formControlName="date"></li>
+                    </ul>
+                </div>
+                <div class="row button-btn">
+                    <div *ngIf="!edit">
+                        <button type="button" class="btn btn-info" [disabled]="form.invalid"
+                            (click)="save()">Save</button>
+                    </div>
+                    <div *ngIf="edit">
+                        <button type="button" class="btn btn-info" [disabled]="form.invalid"
+                            (click)="update()">Update</button>
+                    </div>
+                </div>
+                <div *ngIf="showMessage">
+                    <span style="color:red;padding: 15px;">Thank you !!!!{{message}} , See your entry in View Tab</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
